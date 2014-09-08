@@ -33,6 +33,8 @@ var2=50
 var3=10
 var3=$[${var3} + (${var2} - ${var1})]
 echo $var3
+let "var3=${var1}+${var2}"
+echo $var3
 
 #浮点计算
 var3=`echo "scale=4; 3.0 / 7" | bc`
