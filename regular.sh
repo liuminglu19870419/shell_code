@@ -11,10 +11,10 @@
 #|管道，匹配若干个具有或关系的表达式
 
 #匹配数字电话
-cat regular.sh | gawk --re-interval '/^\(?[2-9][0-9]{2}\)?(| |-|\.)[0-9]{3}( |-|\.)[0-9]{4}$/{print $0}'
+cat regular.sh | awk --re-interval '/^\(?[2-9][0-9]{2}\)?(| |-|\.)[0-9]{3}( |-|\.)[0-9]{4}$/{print $0}'
 
 #匹配email
-cat regular.sh | gawk --re-interval '/^([a-zA-Z0-9_\-\+]+)@([a-zA-Z0-9_\-]+\.)+([a-zA-Z]{2,5})$/{print $0}'
+cat regular.sh | awk --re-interval '/^([a-zA-Z0-9_\-\+]+)@([a-zA-Z0-9_\-]+\.)+([a-zA-Z]{2,5})$/{print $0}'
 
 host@test..test.com
 host@.test..test.com
