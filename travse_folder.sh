@@ -7,20 +7,18 @@ function funSum()
 {
     for file in `ls -a $1`
     do
-        if [ ${file} = ${flag1} ]
+        if [ ${file} = ${flag1} -o ${file} = ${flag2} ]
         then
-            echo $file
-        elif [ ${file} = ${flag2} ] 
-        then
-            echo $file
+           $flag
         else
             #do something
             echo ${file} 
 
             if [ -d $1"/"${file} ]
             then
-                local buffer=${1}"/"${file}
-                funSum $buffer
+                #local buffer=${1}"/"${file}
+                #funSum $buffer
+                funSum ${1}"/"${file}
             fi
         fi
     done
