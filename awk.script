@@ -1,0 +1,97 @@
+
+
+#开始时执行
+BEGIN{
+    FS=" "  #输入分割符
+    OFS="$" #输出分割符
+    RS="\n" #输入换行分割符
+    ORS="\n" #输出换行分割符
+    test="this for head"
+
+    #数组
+    array["a"]="a"
+    array["b"]="b"
+    array["c"]="c"
+    array[1]="1"
+
+    print "awk start"
+    print "************************"
+}
+
+#正则表达式过滤行
+/loop/{
+    print "正则表达式过滤行"
+    print test, $1, end
+    print array["a"], array["b"], array[1]
+}
+
+#数据段过滤行
+$2 ~ /4/{
+    print "数据段过滤行"
+    print $4
+}
+
+#逻辑表达式过滤行
+$2 == 35{
+    print "逻辑表达式过滤行"
+    print $0
+}
+
+#指定行号过滤行
+NR==1{
+    print "指定行号过滤行"
+    for (var in array)
+    {
+        print var
+    }
+}
+
+#条件语句
+#==、！=、>、<、>=、>=、~（匹配于）和！~（不匹配于）
+#!(非)、&&（与）、||（或）和括号（）进行多重判断
+{
+    if( $2 >= 4)
+    {
+        print "more than 4"
+    } else
+    {
+        print "less than 4"
+    }
+}
+
+
+#使用内建函数，自定义函数
+function myrand(input)
+{
+    return int(input * rand())
+}
+
+#循环语句
+NR==1{
+    i = 1
+    while(i < 4)
+    {
+        i++
+        print i
+    }
+
+    do
+    {
+        i--
+        print i
+    }while(i > 0)
+
+    for (i=1; i<4; i++)
+    {
+        printf "i is %d, %d\n", i, myrand(i)
+        #格式化: c字符，d整数，f浮点数，o八进制，s字符串，xX十六进制
+    }
+
+}
+
+
+#结束时执行
+END{
+    print "************************"
+    print "awk end"
+}

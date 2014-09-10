@@ -1,0 +1,21 @@
+total 76
+drwxr-xr-x  4 minglu minglu 4096 Sep 10 21:22 .
+drwxr-xr-x 35 minglu minglu 4096 Sep 10 21:21 ..
+-rw-rw-r--  1 minglu minglu    0 Sep 10 21:22 awk.data
+-rwxrwxr-x  1 minglu minglu  250 Sep 10 21:21 awk.sh
+-rwxrwxr-x  1 minglu minglu  862 Sep  9 20:04 basic_shell.sh
+-rwxrwxr-x  1 minglu minglu 1468 Sep  9 20:04 environment_array.sh
+-rwxrwxr-x  1 minglu minglu  942 Sep  9 20:04 function.sh
+drwxrwxr-x  8 minglu minglu 4096 Sep 10 20:39 .git
+-rw-rw-r--  1 minglu minglu    6 Sep  9 20:04 .gitignore
+-rwxrwxr-x  1 minglu minglu 1820 Sep  9 20:04 if_else_case.sh
+-rwxrwxr-x  1 minglu minglu   81 Sep  9 20:04 listiteration.sh
+-rwxrwxr-x  1 minglu minglu 1690 Sep  9 21:20 loop.sh
+-rwxrwxr-x  1 minglu minglu  376 Sep  9 20:04 redirect.sh
+-rwxrwxr-x  1 minglu minglu  697 Sep  9 20:42 regular.sh
+-rw-rw-r--  1 minglu minglu  190 Sep  9 23:42 sed.data
+-rwxrwxr-x  1 minglu minglu 2744 Sep 10 20:39 sed.sh
+-rw-rw-r--  1 minglu minglu   75 Sep 10 20:36 sed.tmp
+-rwxrwxr-x  1 minglu minglu  821 Sep  9 20:04 shell_param_read.sh
+drwxrwxr-x  3 minglu minglu 4096 Sep 10 19:58 test
+-rwxrwxr-x  1 minglu minglu  523 Sep  9 21:20 travse_folder.sh
